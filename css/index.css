@@ -319,7 +319,7 @@ footer {
   /* Stay in place */
   z-index: 1;
   /* Sit on top */
-  padding-top: 100px;
+  padding-top: 30rem;
   /* Location of the box */
   left: 0;
   top: 0;
@@ -342,6 +342,18 @@ footer {
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+}
+.home .sign-up .modal-content form {
+  display: flex;
+  flex-direction: column;
+}
+.home .sign-up .modal-content form input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 .home .sign-up .close {
   color: #aaaaaa;
