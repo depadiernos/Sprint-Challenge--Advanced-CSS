@@ -1,17 +1,24 @@
 // Home Content
 
 .home {
-
+  margin-top: 12rem;
   .intro {
-
+    img {
+      width: 100%;
+      .radius();
+    }
     h2 {
       padding: 15px;
     }
 
     p {
-      padding:0 15px;
+      padding: 0 15px;
     }
-  
+    @media @phone {
+      img {
+        .radius(1rem);
+      }
+    }
   }
 
   .space-images {
@@ -22,8 +29,16 @@
     img {
       width: 28%;
       margin: 20px 2.5%;
-      border-radius: 20px;
+      .radius();
       height: 100%;
+    }
+    @media @phone {
+      img {
+        width: 100%;
+      }
+      img:not(:first-child) {
+        display: none;
+      }
     }
   }
 
@@ -58,18 +73,42 @@
       }
 
       .btn {
+        .btn-config(@btn-bg-color, white);
+        @media @phone {
+          button {
+            width: 100%;
+            padding: 1rem;
+          }
+        }
       }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
-      
+
       img {
         width: 100%;
         height: auto;
         border-radius: 10px;
       }
     }
+    @media @phone {
+      flex-direction: column-reverse;
+      padding: 1rem;
+      margin: 0;
+      width: 100%;
+      .walk-text {
+        width: 100%;
+      }
+      .walk-img {
+        width: 100%;
+        margin: 0;
+      }
+    }
   }
-}// home
+
+  .sign-up {
+    .sign-up-styles();
+  }
+} // home
